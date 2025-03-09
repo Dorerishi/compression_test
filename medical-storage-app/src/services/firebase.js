@@ -1,7 +1,8 @@
 
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, 
+  createUserWithEmailAndPassword, signInWithEmailAndPassword,onAuthStateChanged, signOut
+ } from "firebase/auth";
 
 
 
@@ -21,4 +22,6 @@ let firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-export { auth, createUserWithEmailAndPassword, signInWithEmailAndPassword };
+export { auth, 
+  createUserWithEmailAndPassword, signInWithEmailAndPassword ,onAuthStateChanged, signOut
+};

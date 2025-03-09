@@ -12,6 +12,7 @@ function Login() {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       alert("Login successful");
+      navigate("/");
     } catch (error) {
       alert(error.message);
     }

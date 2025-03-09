@@ -12,7 +12,7 @@ function Signup() {
     try {
       await createUserWithEmailAndPassword(auth, email, password);
       alert("Account created! Please log in.");
-      navigate("/");
+      navigate("/login");
     } catch (error) {
       alert(error.message);
     }
@@ -26,7 +26,7 @@ function Signup() {
         <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} required />
         <button type="submit">Create Account</button>
       </form>
-      <p>Already have an account? <button onClick={() => navigate("/")}>Login</button></p>
+      <p>Already have an account? <button onClick={() => navigate("/login")}>Login</button></p>
     </div>
   );
 }
